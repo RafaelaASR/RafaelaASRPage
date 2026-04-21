@@ -1,10 +1,9 @@
 <template> 
   <div class="home"> 
-    <section class="hero"> 
+   <!-- <section class="hero"> 
       <h1>Olá, eu sou Seu Nome</h1> 
       <p>Desenvolvedor Web | Designer | Criativo</p> 
-    </section> 
-     
+    </section> -->  
     <About /> 
     <Skills /> 
     <Projects /> 
@@ -28,3 +27,9 @@ export default {
   } 
 } 
 </script> 
+<style>
+  .home{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+</style>
