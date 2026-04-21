@@ -5,15 +5,15 @@
       <p>Desenvolvedor Web | Designer | Criativo</p> 
     </section> -->  
     <About /> 
-    <Skills /> 
-    <Projects /> 
-    <Contact /> 
+    <Tecnologias /> 
+    <!--<Projects /> -->
+    <Contact />
   </div> 
 </template> 
  
 <script> 
 import About from '@/components/About.vue' 
-import Skills from '@/components/Skills.vue' 
+import Tecnologias from '@/components/Tecnologias.vue' 
 import Projects from '@/components/Projects.vue' 
 import Contact from '@/components/Contact.vue' 
  
@@ -21,7 +21,7 @@ export default {
   name: 'Home', 
   components: { 
     About, 
-    Skills, 
+    Tecnologias, 
     Projects, 
     Contact 
   } 

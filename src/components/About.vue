@@ -1,5 +1,10 @@
 <template> 
-  <section id="about" class="about"> 
+  <section
+    id="about"
+    ref="element"
+    class="tecnologias"
+    :class="{ 'animate__animated animate__fadeInUp': isVisible }"
+  >
     <img id="foto-perfil" src="../assets/fotoPerfil.jpeg" alt="" width="20%" height="10%">
     <div class="about-content">
       <h2>Sobre mim</h2>
@@ -16,10 +21,11 @@
   </section> 
 </template> 
  
-<script> 
-export default { 
-  name: 'About' 
-} 
+<script setup> 
+import 'animate.css'
+import { useScrollAnimation } from '@/stores/scrollAnimation'
+
+const { element, isVisible } = useScrollAnimation({ threshold: 0.1 })
 
 </script> 
 <style scoped>
@@ -33,6 +39,7 @@ export default {
   border-radius: 10%;
   border: 10px solid #0C3640;
 }
+
 h2{
   font-weight: 800;
   font-size: 30px;
