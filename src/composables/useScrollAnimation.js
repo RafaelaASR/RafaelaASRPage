@@ -8,14 +8,21 @@ export function useScrollAnimation(options = { threshold: 0.3 }) {
 
   onMounted(() => {
     observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          isVisible.value = true
-        } else {
-          isVisible.value = false
-        }
-      })
-    }, options)
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+            if (!isVisible.value) {
+                isVisible.value = true
+            }
+            } else {
+            setTimeout(() => {
+                isVisible.value = false
+            }, 500)
+            }
+        })
+    }, {
+        threshold: 0.3,
+        rootMargin: '0px 0px -50px 0px'
+    })
 
     if (element.value) {
       observer.observe(element.value)

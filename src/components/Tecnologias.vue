@@ -22,7 +22,7 @@
  
 <script setup> 
 import 'animate.css'
-import { useScrollAnimation } from '@/stores/scrollAnimation'
+import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
 const { element, isVisible } = useScrollAnimation({ threshold: 0.2 })
 
@@ -42,8 +42,9 @@ h2{
   justify-content: center;
   align-items: center;
   gap: 70px;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: 25%;
   margin-right: 25%;
+  margin-bottom: 100px;
 }
 </style>

@@ -13,7 +13,7 @@
  
 <script setup> 
 import 'animate.css'
-import { useScrollAnimation } from '@/stores/scrollAnimation'
+import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
 const { element, isVisible } = useScrollAnimation({ threshold: 0.2 })
 </script> 

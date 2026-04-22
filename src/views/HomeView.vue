@@ -7,25 +7,14 @@
     <About /> 
     <Tecnologias /> 
     <!--<Projects /> -->
-    <Contact />
   </div> 
 </template> 
  
-<script> 
+<script setup> 
 import About from '@/components/About.vue' 
 import Tecnologias from '@/components/Tecnologias.vue' 
 import Projects from '@/components/Projects.vue' 
-import Contact from '@/components/Contact.vue' 
  
-export default { 
-  name: 'Home', 
-  components: { 
-    About, 
-    Tecnologias, 
-    Projects, 
-    Contact 
-  } 
-} 
 </script> 
 <style>
   .home{
